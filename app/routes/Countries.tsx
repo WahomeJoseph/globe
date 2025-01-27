@@ -13,7 +13,7 @@ export default function Countries({loaderData}: Route.ComponentProps) {
     const [region, setRegion] = useState<string>('')
     // filter search
     const filterCountries = loaderData.filter((country: any) => {
-        const regionSearch = !region || country.region.common.toLowerCase() === region.toLowerCase()
+        const regionSearch = !region || country.region.toLowerCase() === region.toLowerCase()
 
         const matchSearch = !search || country.name.common.toLowerCase().includes(search.toLowerCase())
         return matchSearch && regionSearch
@@ -31,7 +31,7 @@ export default function Countries({loaderData}: Route.ComponentProps) {
 
                 <select value={region} onChange={(e) => setRegion(e.target.value)} className="border border-gray-300 rounded px-3 py-2 w-full sm:w-1/2 focus:outline-none focus:border-indigo-500">
                     <option value="">All Regions</option>
-                    <option value="africa">Alfrica</option>
+                    <option value="africa">Africa</option>
                     <option value="america">America</option>
                     <option value="asia">Asia</option>
                     <option value="europe">Europe</option>
