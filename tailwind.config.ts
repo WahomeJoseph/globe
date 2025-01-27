@@ -16,6 +16,10 @@ export default {
           '"Noto Color Emoji"',
         ],
       },
+      colors:{
+          bgcolor: '#e2f3f4',
+          bgbtn: '#6dc7d1'
+      }
     },
   },
   plugins: [],
