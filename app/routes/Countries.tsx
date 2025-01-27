@@ -12,13 +12,13 @@ export default function Countries({loaderData}: Route.ComponentProps) {
     const [search, setSearch] = useState<string>('')
     const [region, setRegion] = useState<string>('')
     // filter search
-    const filterCountries = loaderData.filter((country: any) => {
-        
+    const filterCountries = loaderData ? loaderData.filter((country: any) => {
+
         const regionSearch = !region || country.region.toLowerCase() === region.toLowerCase()
         const matchSearch = !search || country.name.common.toLowerCase().includes(search.toLowerCase())
         return matchSearch && regionSearch
-    })
-    console.log(loaderData);
+    }) : []
+ 
     return (
         <div className="p-6">
             <h1 className="text-2xl font-bold mb-6 text-gray-900">List of Countries</h1>
