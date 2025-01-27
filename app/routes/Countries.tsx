@@ -13,8 +13,8 @@ export default function Countries({loaderData}: Route.ComponentProps) {
     const [region, setRegion] = useState<string>('')
     // filter search
     const filterCountries = loaderData.filter((country: any) => {
+        
         const regionSearch = !region || country.region.toLowerCase() === region.toLowerCase()
-
         const matchSearch = !search || country.name.common.toLowerCase().includes(search.toLowerCase())
         return matchSearch && regionSearch
     })
