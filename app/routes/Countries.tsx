@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { Route } from "./+types/countries";
+import type { Route } from "./+types/Countries";
 import { Link } from "react-router";
 
 export async function clientLoader() {
@@ -31,19 +31,19 @@ export default function countries({loaderData}: Route.ComponentProps) {
                 className="border border-gray-300 rounded px-3 py-2 w-full sm:w-1/2 focus:outline-none focus:border-indigo-500"/>
 
                 <select value={region} onChange={(e) => setRegion(e.target.value)} className="border border-gray-300 rounded px-3 py-2 w-full sm:w-1/2 focus:outline-none focus:border-indigo-500">
-                    <option value="">All Regions</option>
-                    <option value="africa">Africa</option>
-                    <option value="america">America</option>
-                    <option value="asia">Asia</option>
-                    <option value="europe">Europe</option>
-                    <option value="oceania">Oceania</option>
+                    <option value="" className="bg-bgbtn">All Regions</option>
+                    <option value="africa" className="bg-bgbtn">Africa</option>
+                    <option value="america" className="bg-bgbtn">America</option>
+                    <option value="asia" className="bg-bgbtn">Asia</option>
+                    <option value="europe" className="bg-bgbtn">Europe</option>
+                    <option value="oceania" className="bg-bgbtn">Oceania</option>
                 </select>
             </div>
             {filterCountries.length === 0 ? ( <span className="text-red-500">Filters do not match any countries!</span>
          ) : (
             <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {filterCountries.map((country:any) => (
-                    <li key={country.cca3} className="bg-white border border-gray-200 rounded-xl p-4 shadow hover:shadow-lg transition">
+                    <li key={country.cca3} className="bg-bgbtn border border-gray-200 rounded-md p-4 shadow-md hover:shadow-bgbtn transition">
                         <Link to={`/countries/${country.name.common}`} className="text-indigo-600 hover:underline text-lg font-semibold">
                         {country.name.common}
                         </Link>

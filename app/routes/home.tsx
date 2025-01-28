@@ -40,7 +40,7 @@ export default function Home() {
           </div>
           <div className="w-full md:w-1/2">
             <div className="overflow-hidden rounded-md shadow-md shadow-bgbtn">
-              <img src="https://image.winudf.com/v2/image/Ymx1ZWNhcC5pbWFnZXouYmVhdXRpZnVsX2NvdW50cmllc193YWxscGFwZXJzX3NjcmVlbl8wXzlpMW14OWl1/screen-0.webp?fakeurl=1&type=.webp" alt="Explore countries" className="w-full h-auto"/>
+              <img src="https://images.unsplash.com/photo-1596005554384-d293674c91d7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bmFpcm9iaXxlbnwwfHwwfHx8MA%3D%3D" alt="Explore countries" className="w-full h-auto"/>
             </div>
           </div>
         </div>

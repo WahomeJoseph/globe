@@ -20,7 +20,7 @@ export default function Country({ loaderData }: Route.ComponentProps) {
     flagUrl: loaderData[0]?.flags?.png || "",
   };
   return (
-    <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className=" bg-bgcolor h-screen p-6 grid grid-cols-1 md:grid-cols-2 gap-8">
       <div className="flex flex-col gap-4">
         <h2 className="text-3xl font-bold text-gray-900">{country.name}</h2>
         <div className="space-y-2 text-gray-700">

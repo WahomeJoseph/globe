@@ -5,7 +5,7 @@ export default [
     route('about', 'routes/About.tsx'),
     
     ...prefix('countries', [
-        index('routes/countries.tsx'),
+        index('routes/Countries.tsx'),
         route(':countryName', 'routes/Country.tsx'),
     ])
 ] satisfies RouteConfig;
