@@ -1,4 +1,4 @@
-import { use, useState } from "react";
+import { useState } from "react";
 import type { Route } from "./+types/countries";
 import { Link } from "react-router";
 
@@ -8,20 +8,21 @@ export async function clientLoader() {
     return data;
 }
 
-export default function Countries({loaderData}: Route.ComponentProps) {
+export default function countries({loaderData}: Route.ComponentProps) {
     const [search, setSearch] = useState<string>('')
     const [region, setRegion] = useState<string>('')
     // filter search
-    const filterCountries = loaderData ? loaderData.filter((country: any) => {
+    const filterCountries = loaderData.filter((country: any) => {
 
         const regionSearch = !region || country.region.toLowerCase() === region.toLowerCase()
         const matchSearch = !search || country.name.common.toLowerCase().includes(search.toLowerCase())
         return matchSearch && regionSearch
-    }) : []
+    })
+    console.log(loaderData)
  
     return (
-        <div className="p-6">
-            <h1 className="text-2xl font-bold mb-6 text-gray-900">List of Countries</h1>
+        <div className="bg-bgcolor h-screen p-6">
+            <h1 className="text-2xl font-bold mb-6 text-gray-900">Countries</h1>
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <input type="text" 
                 placeholder="Search by name" 

@@ -18,7 +18,8 @@ export default {
       },
       colors:{
           bgcolor: '#e2f3f4',
-          bgbtn: '#6dc7d1'
+          bgbtn: '#6dc7d1',
+          txtcolor: '#5438dc'
       }
     },
   },
